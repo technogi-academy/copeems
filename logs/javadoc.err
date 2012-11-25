@@ -1,0 +1,3 @@
+/Users/dev/test/copeems/app/controllers/Application.java:8: error: package models does not exist
+import models.*;
+^
