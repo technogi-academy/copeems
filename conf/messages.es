@@ -3,7 +3,8 @@
 #
 
 
-header.view.controller.index=Mi Título
+header.view.controller.index=Mi Título en español %s
+Pon_un_correo_valido=Pon un correo Válido
 
 cmd_save=Salvar
 cmd_edit=Editar

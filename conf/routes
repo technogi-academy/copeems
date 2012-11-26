@@ -3,6 +3,7 @@
 # ~~~~
 
 # Home page
+GET		/estados/{id}							Estados.getEstados
 GET     /                                       Application.index
 GET		/index2/{arg}							Application.index2									
 GET		/tx/{username}							Application.transactions									

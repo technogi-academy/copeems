@@ -1,0 +1,45 @@
+#{extends 'main.html' /}
+#{set title:messages.get('header.view.controller.index','COPEEMS') /}
+#{set nombre:'Carlos'/}
+
+#{stylesheet 'secure.css'/}
+
+Hello &{'header.view.controller.index','COPEEMS'}
+<p>
+${u.username}
+<a href="@{index}">link</a>
+#{a @index()}link#{/a}
+#{script 'myscripts.js'/}
+<p>
+#{form @myForm()}
+	<label>Usuario</label>
+	<input name="u.username"> 
+	<input type="submit">
+#{/form}
+
+<ul>
+	#{list items:usuarios, as:'usuario'}
+	    <li>${usuario.username}</li>
+	#{/list}
+ 
+</ul>
+
+<div id="estados">
+
+</div>
+<script type="text/javascript">
+	var ruta = #{jsRoute @Estados.getEstados(':paisId') /};
+    $(function(){
+    	$.ajax({
+    		url: ruta.url({paisId: 1}),
+    	    type: ruta.method,
+    	    success: function(data){
+    	    	content = "";
+    	    	for(i=0; i < data.length; i++){
+        	    	content+="<p>"+data[i].name+"</p>";
+    	    	}
+    	    	$("#estados").html(content);
+    	    }
+    	});
+    })
+</script>
