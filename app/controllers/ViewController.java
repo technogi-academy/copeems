@@ -17,8 +17,13 @@ public class ViewController extends Controller{
 		render(u,usuarios);
 	}
 	
-	public static void myForm(@Valid Usuario u){
+public static void form(){
 		
+		render();
+	}
+	
+	public static void myFormw(Usuario u){
+		checkAuthenticity();
 		renderText("OK");
 	}
 }

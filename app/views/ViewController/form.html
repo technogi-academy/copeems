@@ -1,0 +1,13 @@
+#{extends 'main.html' /}
+#{set title:messages.get('header.view.controller.index','COPEEMS') /}
+#{set nombre:'Carlos'/}
+
+#{stylesheet 'secure.css'/}
+
+Hello &{'header.view.controller.index','COPEEMS'}
+
+#{form @myFormw()}
+	<label>Usuario</label>
+	<input name="u.username"> 
+	<input type="submit">
+#{/form}
