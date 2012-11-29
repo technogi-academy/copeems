@@ -5,3 +5,15 @@
 #   email: bob@gmail.com
 #   password: secret
 #   fullname: Bob
+
+Usuario(u3):
+  username: usuario3
+  email: p@ss.com
+  
+Usuario(u1):
+  username: usuario1
+  email: p@ss.com
+
+Usuario(u2):
+  username: usuario2
+  email: p@ss.com

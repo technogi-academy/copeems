@@ -28,6 +28,16 @@ ${u.username}
 <div id="estados">
 
 </div>
+
+#{testTag1 title:'Mi Titulo'}
+Este es el cuerpo
+#{/testTag1}
+#{testTag1 /}
+
+#{copeems.helloTestTag1 title:'COPEEMS'}
+	TEXTO
+#{/copeems.helloTestTag1}
+
 <script type="text/javascript">
 	var ruta = #{jsRoute @Estados.getEstados(':paisId') /};
     $(function(){
@@ -36,8 +46,9 @@ ${u.username}
     	    type: ruta.method,
     	    success: function(data){
     	    	content = "";
-    	    	for(i=0; i < data.length; i++){
-        	    	content+="<p>"+data[i].name+"</p>";
+    	    	alert(data.code);
+    	    	for(i=0; i < data.estdos.length; i++){
+        	    	content+="<p>"+data.estdos[i].id+ " - "+data.estdos[i].name+"</p>";
     	    	}
     	    	$("#estados").html(content);
     	    }

@@ -13,7 +13,7 @@ public class Estados extends Controller {
 		estados.add(new Estado(2L,"Nuevo Leon"));
 		estados.add(new Estado(3L,"Yucatan"));
 		estados.add(new Estado(4L,"Aguascalientes"));
-		renderJSON(estados);
+		renderJSON(new EstadoWrapper(estados, "codigo"));
 	}
 	
 	public static class Estado{
@@ -25,6 +25,17 @@ public class Estados extends Controller {
 			this.name = name;
 		}
 		
+		
+	}
+	
+	public static class EstadoWrapper{
+		public final List<Estado> estdos;
+		public final String code;
+		public EstadoWrapper(List<Estado> estdos, String code) {
+			super();
+			this.estdos = estdos;
+			this.code = code;
+		}
 		
 	}
 }

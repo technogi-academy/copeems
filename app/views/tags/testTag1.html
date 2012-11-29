@@ -1,0 +1,10 @@
+#{ifnot _title}
+<h1>TITULO DEFAULT</h1>
+<p>Test Tag 1</p>
+#{/ifnot}
+#{else}
+<h1>${_title}</h1>
+<p>Test Tag 1</p>
+#{/else}
+
+#{doBody /}

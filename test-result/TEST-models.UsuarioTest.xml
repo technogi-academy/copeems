@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<testsuite failures="0" time="0.414" errors="0" skipped="0" tests="2" name="models.UsuarioTest">
+  <testcase classname="models.UsuarioTest" name="testLogin" time="0.386">
+      </testcase>
+  <testcase classname="models.UsuarioTest" name="testFormat" time="0.028">
+      </testcase>
+</testsuite>

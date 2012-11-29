@@ -18,7 +18,8 @@ import models.*;
 
 public class Application extends Controller {
 
-    public static void index() {
+    @SuppressWarnings("null")
+	public static void index() {
     	
     	Object o = null;
     	
@@ -48,7 +49,8 @@ public class Application extends Controller {
     	u.save();
     	et.commit();
     	
-    	Usuario u2 = Usuario.findById(9L);
+    	@SuppressWarnings("unused")
+		Usuario u2 = Usuario.findById(9L);
     	renderText(u);
     }
     
@@ -97,6 +99,39 @@ public class Application extends Controller {
 		if(k==null){
 			login();
 		}
+		
+	}
+	
+	public static void duplicates(){
+		List<String> list = new LinkedList<String>();
+		Set<String> set = new HashSet<String>();
+		
+		list.add("1");
+		list.add("2");
+		list.add("3");
+		list.add("1");
+		list.add("2");
+		
+		set.add("1");
+		set.add("2");
+		set.add("3");
+		set.add("1");
+		set.add("2");
+		
+		
+		String listText = "";
+		for(String s:list){
+			listText+=s;
+		}
+		
+		String setText = "";
+		for(String s:set){
+			setText+=s;
+		}
+		
+		//SortedSet<String> s = new TreeSet<String>();
+		
+		renderText(listText+"\n"+setText);
 		
 	}
 	

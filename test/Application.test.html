@@ -4,4 +4,8 @@
     // Open the home page, and check that no error occured
     open('/')
     assertNotTitle('Application error')
+    
+    click("name=send")
+    type('id=inputAdmin', 'admin')
+    assertText("correct")
 #{/selenium}
